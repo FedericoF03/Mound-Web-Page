@@ -6,6 +6,7 @@ const useFetch = (dataRequest) => {
   const [error, setError] = useState(null);
 
   const handlerRequest = (data) => setRequest(() => data);
+
   const handlerError = (data) => setError(() => data);
   const returnBody = (dataAntState, res) => ({
     ...dataAntState,
@@ -21,7 +22,7 @@ const useFetch = (dataRequest) => {
     return () => (check = false);
   }, [request.url]);
 
-  return { request, handlerRequest, error, handlerError };
+  return { request, handlerRequest, error, handlerError, setRequest };
 };
 
 export default useFetch;

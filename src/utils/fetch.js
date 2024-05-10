@@ -7,7 +7,6 @@ const fetching = async (url, setter, requestData, handError) => {
           res.status === 200 && setter((antState) => requestData(antState, res))
       );
   } catch (error) {
-    console.log(error, handlerError);
     handError(error);
   }
 };

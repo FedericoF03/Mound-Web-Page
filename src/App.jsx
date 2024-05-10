@@ -4,6 +4,7 @@ import useDisplay from "./Hooks/useDisplay";
 import useFetch from "./Hooks/useFetch";
 import Menu from "./components/Menu/Menu";
 import fetching from "./utils/fetch";
+import ProyectData from "./components/ProyectData/ProyectData";
 
 function App() {
   const { display, handlerDisplay } = useDisplay(false);
@@ -12,10 +13,13 @@ function App() {
   });
   const [dataToSee, setDataToSee] = useState(null);
   const [dataRequest, setDataRequest] = useState({});
-  const [DataError, setHandlerDataError] = useState({});
+  const [DataError, setHandlerDataError] = useState(null);
+  
   useEffect(() => {
     const returnBody = () => {};
-    const handlerDataError = () => {};
+    const handlerDataError = (error) => {
+      setHandlerDataError(error);
+    };
     let check = true;
     if (check && dataRequest.url) {
       check = false;
@@ -26,9 +30,9 @@ function App() {
 
   return (
     <>
-      {/*Burger button*/}
-      <button onClick={handlerDisplay} />
-      {!error && display && (
+      {/*arrow button*/}
+      {display && <button onClick={handlerDisplay}>{"<--"}</button>}
+      {!error && !display && request.results && (
         <Menu
           request={request}
           handlerDisplay={handlerDisplay}
@@ -37,7 +41,9 @@ function App() {
           setDataToSee={setDataToSee}
         />
       )}
-      <p>{dataToSee}</p>
+      {!DataError && display && dataToSee && (
+        <ProyectData dataToSee={dataToSee} />
+      )}
     </>
   );
 }
