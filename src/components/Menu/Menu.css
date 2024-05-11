@@ -1,0 +1,17 @@
+.menu__Menu {
+  width: calc(100% - 0.1rem);
+  margin: 3rem auto;
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.principle-variables {
+  width: 80%;
+  max-width: 400px;
+  margin: auto;
+  padding: 1.5rem;
+  font-weight: 700;
+  border: 0.2rem solid #000000;
+  border-radius: 1rem;
+}

@@ -1,0 +1,21 @@
+.box-conteiner-dates {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.box-dates {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.graph {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

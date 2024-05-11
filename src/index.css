@@ -2,7 +2,7 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
+  font-family: Helvetica, Arial, sans-serif;
   color-scheme: light dark;
   color: rgba(0, 0, 0, 0.87);
   background-color: #ffffff;
@@ -52,4 +52,22 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+input[type="”date”"] {
+  appearance: none;
+  color: #1d1d1d;
+  font-family: “Helvetica”, arial, sans-serif;
+  font-size: 18px;
+  border: 1px solid #ecf0f1;
+  background: #ecf0f1;
+  padding: 4px;
+  display: inline-block;
+  visibility: visible;
+  width: 140px;
+}
+
+
+.numbers {
+  font-size: large;
 }

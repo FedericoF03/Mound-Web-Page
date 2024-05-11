@@ -1,8 +1,8 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  box-sizing: border-box;
   text-align: center;
+  width: 100%;
 }
 
 .card {
@@ -11,4 +11,26 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.button {
+  color: #000000;
+  border: 0.12rem solid #949393;
+  background-color: #ede9e9;
+  max-width: 30px;
+  max-height: 2rem;
+  display: flex;
+  justify-content: center;
+  min-height: min-content;
+  margin: auto auto 1rem auto;
+  align-items: center;
+}
+
+.arrow {
+  color: #000000;
+  max-width: 30px;
+  max-height: 30px;
+  width: 30rem;
+  height: 30rem;
+  transform: rotate(180deg);
 }
