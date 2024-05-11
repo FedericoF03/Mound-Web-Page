@@ -11,10 +11,12 @@ const Menu = ({ request, handlerDisplay, setDataToSee }) => {
     <section className="menu__Menu">
       {request.results.length > 0 &&
         request.results.map((el) => (
-          <div className="principle-variables" key={uuid()}>
-            <p onClick={() => select(el.idVariable)}>
-              {el.descripcion.split("(")[0]}
-            </p>
+          <div
+            className="principle-variables"
+            onClick={() => select(el.idVariable)}
+            key={uuid()}
+          >
+            <p>{el.descripcion.split("(")[0]}</p>
             <p>{el.fecha}</p>
             <p className="numbers">{`${
               el.descripcion.includes("$") ? "$" : ""
